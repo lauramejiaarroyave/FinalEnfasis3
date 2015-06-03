@@ -25,7 +25,13 @@ angular.module('finalEnfasis3App')
       mainService.getPaises(callbackPaises);
     }
 
+    $scope.redii= function(){
 
+
+      location.href ='http://localhost:9000/creator';
+
+      mainService.getPaises(callbackPaises);
+    }
     $scope.init();
 
 

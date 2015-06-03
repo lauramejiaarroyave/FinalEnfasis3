@@ -1,20 +1,19 @@
 'use strict';
 
 angular.module('finalEnfasis3App')
-  .service('detailService', function ($http) {
+  .service('creatorService', function ($http) {
 
-    var idCode= location.href.split('detailPaises')[1].split('/')[1];
+
     var self = this;
     var data;
 
 
-    self.getPa = function (callback, idCode){
+    self.getInfo = function (callback){
 
-      $http.get('https://restcountries.eu/rest/v1/alpha/'+ idCode).
+      $http.get('http://greatsource.co/futuro/API/getAll?cedula=1010').
         success(function(data, status, headers, config) {
 
           callback(data);
-
 
         }).
         error(function(data, status, headers, config) {

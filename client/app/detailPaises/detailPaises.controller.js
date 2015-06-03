@@ -1,19 +1,19 @@
 'use strict';
 
 angular.module('finalEnfasis3App')
-  .controller('DetailPaisesCtrl', function ($scope, mainService) {
+  .controller('DetailPaisesCtrl', function ($scope, detailService) {
 
     var idCode= location.href.split('detailPaises')[1].split('/')[1];
 
 
     $scope.init=function(){
 
-      mainService.getPaises(callbackPaises, idCode);
+      detailService.getPa(callbackPais, idCode);
     }
 
-    var callbackPaises= function(data){
+    var callbackPais= function(data){
 
-      $scope.country= data[0];
+      $scope.country= data;
 
       console.log(data);
     }
