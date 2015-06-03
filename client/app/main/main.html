@@ -1,0 +1,71 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="color: orangered">My Design</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="location.href = 'http://localhost:9000/'">Home</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<head>
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../components/modal/modal.service.js"></script>
+</head>
+
+<div style="height: 70px"></div>
+
+<div class="container col-md-offset-2 col-md-8" style="background-color: orange" align="center">
+  <label style="color:#0081c2; font-size:50px">Countries List</label>
+</div>
+
+<div style="height: 150px"></div>
+
+<div class="container">
+
+<table class="table">
+
+  <tr>
+    <th>
+      Country Name
+    </th>
+    <th>
+      Capital
+    </th>
+    <th>
+      Continent
+    </th>
+  </tr>
+  <tr ng-repeat="country in countries">
+    <td>
+      <a data-toggle="modal" title="The Population of {{country.name}} is {{country.population}}" class="btn btn-primary btn-large" ng-click="redirection(country.alpha2Code)" >{{country.name}}</a>
+
+    </td>
+    <td>
+      {{country.capital}}
+    </td>
+    <td>
+      {{country.region}}
+    </td>
+  </tr>
+</table>
+  <div style="height: 150px"></div>
+</div>
+
+
+
+
+
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-right">
+      <p class="navbar-brand" href="#" style="color: orangered">Designed By</p>
+      <p class="navbar-brand" href="#" style="color: #0081c2">**Laura**</p>
+    </div>
+  </div>
+</nav>
